@@ -243,3 +243,39 @@ footer {
     margin-left: 40px;
   }
 }
+
+@media only screen and (max-width: 390px) {
+  /*Para telemoveis*/
+  .intro-title, .intro-subtitle, footer  {
+    margin-left: 40px;
+  }
+  section {
+    width: 28%;
+    margin: auto;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  body, .skills-text {
+    font-size: 10pt;
+  }
+  .grid-2-cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+  }
+  .exp-row .empresa {
+    font-size: 10pt;
+    padding-left: 30px;
+  }
+  .exp-row .data {
+    font-size: 8pt;
+    padding-left: 30px;
+  }
+  .exp-row .texto {
+    font-size: 8pt;
+    padding-left: 30px;
+  }
+  .webtrain-section {
+    width: 25%;
+  }
+}
