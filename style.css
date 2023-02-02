@@ -1,14 +1,14 @@
+/*
+Author: João Pedro Alves
+*/
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
-
 
 body {
   font-family: 'Poppins', sans-serif;
-  color: #343a40;
-  border-bottom: 10px solid  #087f5b;
+  color: #4c5258;
 }
 
 .container {
@@ -26,6 +26,52 @@ h2 {
   letter-spacing: -0.5px;
 }
 
+.intro {
+  height: 100vh;
+  position: relative;
+  color: #fff;
+}
+
+.intro .overlay-itro {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0px;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  opacity: .5;
+}
+
+.bg-image {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+.display-table {
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+
+.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.intro .intro-title {
+  color: #fff;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.intro .intro-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
 .grid-2-cols {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -37,20 +83,20 @@ img {
     border-radius: 12px;
 }
 
-.features-icon {
-  stroke: #087f5b;
+.icons {
+  stroke: #bf5944;
   width: 32px;
   height: 32px;
   margin-bottom: 24px;
 }
 
-.features-title {
+.skills-title {
   margin-bottom: 16px;
   font-size: 20px;
   font-weight: 600;
 }
 
-.features-text {
+.skills-text {
   font-size: 18px;
   line-height: 1.7;
 
@@ -62,8 +108,11 @@ img {
   padding-top: 20px;
 }
 
-.testimonial-section {
-  background: rgb(44,193,147);
+.webtrain {
+  font-weight: 450;
+}
+
+.webtrain-section {
   background: linear-gradient(90deg, rgba(44,193,147,1) 0%, rgba(167,167,222,1) 35%, rgba(180,92,92,1) 100%);
   color: #fff;
   padding: 24px;
@@ -71,17 +120,17 @@ img {
   margin-top: 100px;
 }
 
-.testimonial-box {
+.webtrain-box {
   grid-column: 2 / -1;
   align-self: center;
 }
 
-.testimonial-box h2 {
+.webtrain-box h2 {
   margin-bottom: 24px;
   font-size: 24px;
 }
 
-.testimonial-text {
+.webtrain-text {
   font-style: italic;
   margin-bottom: 24px;
   font-size: 18px;
@@ -98,83 +147,6 @@ footer {
   font-size: 14px;
 }
 
-.header {
-  height: 100vh;
-  position: relative;
-  color: #fff;
-}
-
-.image {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center center;
-}
-
-.camada-header {
-  position: absolute;
-  top: 0;
-  left: 0px;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  
-}
-
-.camada-header::before {
-  background-color: rgba(0, 0, 0, 0.6);
-  opacity: .9;
-}
-
-.header {
-  position: relative; 
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.header::before {
-  content: "";
-  background-image: url('./joao-alves.jpg');
-  background-size: cover;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0.75;
-}
-
-.display-table {
-  width: 100%;
-  height: 100%;
-  display: table;
-}
-
-.table-cell {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.header-name {
-  position: absolute;
-  font-size: 60px;
-  color: #fff;
-  line-height: 0.9;
-  text-align: center;
-}
-
-.header-areas {
-  position: absolute;
-  margin-top: 130px;
-  font-size: 20px;
-  color: #fff;
-  line-height: 0.9;
-  text-align: center;
-}
-
 .title {
   padding-top:60px;
 }
@@ -183,10 +155,6 @@ footer {
   font-size: 20px;
   font-weight: 300;
   color: dimgrey;
-}
-
-.webtrain {
-  font-weight: 450;
 }
 
 .btn:link,
@@ -213,7 +181,6 @@ footer {
   background-color: ghostwhite;
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
-  background: rgb(178,194,224);
   background: linear-gradient(90deg, rgba(178,194,224,1) 0%, rgba(180,165,118,1) 100%);
 }
 
@@ -243,4 +210,36 @@ footer {
   text-transform: capitalize;
   font-size: 13px;
   font-weight: 400;
+}
+
+footer {
+  padding-top: 40px;
+}
+
+@media (max-width: 1024px) {
+  .bg-image {
+    background-attachment: scroll;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .intro-title, .intro-subtitle, footer  {
+    margin-left: 100px;
+  }
+  section {
+    width: 50%;
+    margin: auto;
+    margin-left: 100px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .intro-title, .intro-subtitle, footer  {
+    margin-left: 40px;
+  }
+  section {
+    width: 50%;
+    margin: auto;
+    margin-left: 40px;
+  }
 }
